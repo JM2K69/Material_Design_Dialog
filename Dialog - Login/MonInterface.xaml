@@ -1,0 +1,58 @@
+<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"		
+        Title="First Dialog" 
+        Width="370" 
+        Height="310"  
+	     WindowStartupLocation="CenterScreen" 
+        BorderThickness="1"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="CanResize">
+
+<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>           
+            <!-- work Only In 2.6 Material Design /-->
+             <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
+             <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+	
+      <materialDesign:DialogHost Name="Dialog1">
+        <materialDesign:DialogHost.DialogContent>
+            <StackPanel Margin="15">
+              <StackPanel Orientation="Vertical">  
+                <TextBlock Margin="10" Text="Enter your Credential" />
+                <TextBox Name="Name" materialDesign:HintAssist.Hint="Name" />
+                <PasswordBox Name="PasswordBox" 
+                    materialDesign:HintAssist.Hint="Floating Password" 
+                    materialDesign:HintAssist.Foreground="Green"
+                    materialDesign:TextFieldAssist.UnderlineBrush="Green"
+                    Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+              </StackPanel>
+                <Button Margin="10" Name="Close_ME" Content="Close" />
+            </StackPanel>
+        </materialDesign:DialogHost.DialogContent>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Name="Show" Content="Show Dialog" Margin="0,0,0,10"/>
+        </StackPanel>
+        
+    </materialDesign:DialogHost>
+</Window>     
+
+
+   
+   
+    
+    
+    

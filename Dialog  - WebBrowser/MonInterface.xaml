@@ -1,0 +1,45 @@
+<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"		
+        Title="Dialog Web-Broswer" 
+        Width="870" 
+        Height="610"  
+	     WindowStartupLocation="CenterScreen" 
+        BorderThickness="1"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="CanResize">
+
+<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+            <!-- work Only In 2.6 Material Design /-->
+             <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
+             <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+	
+      <materialDesign:DialogHost Name="F1" CloseOnClickAway="True" Style="{StaticResource MaterialDesignEmbeddedDialogHost}">
+          
+        <materialDesign:DialogHost.DialogContent>
+            <WebBrowser Source="http://JM2K69.github.io" Width="800" Height="600"/>
+        </materialDesign:DialogHost.DialogContent>
+
+        <Button Name="Show" Content="Show Dialog" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    </materialDesign:DialogHost>
+</Window>     
+
+
+   
+   
+    
+    
+    
